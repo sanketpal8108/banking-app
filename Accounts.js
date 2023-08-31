@@ -25,9 +25,9 @@ class Accounts{
         let newTransaction = Transactions.newTransaction(new Date().toJSON(),this.id,-1,'Debit',amount,this.balance)
         this.passbook.push(newTransaction)
     }
-    depositMoney(amount){
+    depositMoney(amount,senderID){
         this.balance += amount
-        let newTransaction = Transactions.newTransaction(new Date().toJSON(),this.id,-1,'Credit',amount,this.balance)
+        let newTransaction = Transactions.newTransaction(new Date().toJSON(),this.id,senderID,'Credit',amount,this.balance)
         this.passbook.push(newTransaction)
     }
     

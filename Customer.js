@@ -240,7 +240,7 @@ class Customer{
                 throw new Error('Receiver Account Not Found')
             }
             foundSenderAccount.withdrawMoney(amount)
-            foundReceiverAccount.depositMoney(amount)
+            foundReceiverAccount.depositMoney(amount,foundSenderAccount.id)
             this.#updateTotalBalance()
             receiverCustomer.#updateTotalBalance()
         } catch (error) {
@@ -261,7 +261,7 @@ class Customer{
                 throw new Error('Receiver Account Not Found')
             }
             foundSenderAccount.withdrawMoney(amount)
-            foundReceiverAccount.depositMoney(amount)
+            foundReceiverAccount.depositMoney(amount,foundSenderAccount.id)
             this.#updateTotalBalance()
 
         } catch (error) {
@@ -277,7 +277,7 @@ class Customer{
             if(foundAccount == null){
                 throw new Error('Account Not Found')
             }
-            foundAccount.depositMoney(amount)
+            foundAccount.depositMoney(amount,-1)
             this.#updateTotalBalance()
         } catch (error) {
             console.log(error.message);

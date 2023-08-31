@@ -21,6 +21,8 @@ console.log(u2.getTotalBalance());
 u1.depositMoney(2,1000)
 console.log(u1.getTotalBalance());
 u1.transferMoney(2,2,4,100)
+console.log("--------------------------------");
+console.log(u2.getPassbook(4));
 u2.withdrawMoney(4,100)
 console.log(u1.getTotalBalance());
 console.log(u2.getTotalBalance());
@@ -28,6 +30,7 @@ console.log(u1.getPassbook(2));
 console.log(u1.getAllAccounts());
 u1.selfTransferMoney(2,0,500)
 console.log(u1.getPassbook(2));
+console.log("--------------------------------");
 console.log(u1.getPassbook(0));
 console.log(b1.getAllAccounts());
                 
